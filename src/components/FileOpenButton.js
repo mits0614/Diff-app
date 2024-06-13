@@ -1,8 +1,6 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 const FileOpenButton = ({ setText }) => {
-  const fileInputRef = useRef(null);
-
   const handleFileOpen = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -14,20 +12,9 @@ const FileOpenButton = ({ setText }) => {
     }
   };
 
-  const handleClick = () => {
-    fileInputRef.current.click();
-  };
-
   return (
     <div>
-      <input
-        type="file"
-        accept=".inp"
-        onChange={handleFileOpen}
-        style={{ display: 'none' }}
-        ref={fileInputRef}
-      />
-      <button onClick={handleClick}>Open File</button>
+      <input type="file" onChange={handleFileOpen} />
     </div>
   );
 };

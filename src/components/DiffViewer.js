@@ -1,11 +1,10 @@
-// DiffViewer.js
 import React from 'react';
-import DiffViewerComponent from './DiffViewerComponent'; // パスが正しいか確認してください
+import DiffViewerComponent from './DiffViewerComponent';
 
-const DiffViewer = () => {
+const DiffViewer = ({ oldValue, newValue }) => {
   return (
-    <div>
-      <DiffViewerComponent />
+    <div className="diff-viewer">
+      <DiffViewerComponent oldValue={oldValue} newValue={newValue} />
     </div>
   );
 };
