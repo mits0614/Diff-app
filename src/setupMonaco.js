@@ -1,10 +1,7 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './index.css';
+// src/setupMonaco.js
+import * as monaco from 'monaco-editor';
 
-// MonacoエディターのベースURLを設定
-window.MonacoEnvironment = {
+self.MonacoEnvironment = {
   getWorkerUrl: function (moduleId, label) {
     if (label === 'json') {
       return './json.worker.bundle.js';
@@ -22,11 +19,7 @@ window.MonacoEnvironment = {
   }
 };
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+monaco.editor.create(document.getElementById('container'), {
+  value: 'function hello() {\n\talert("Hello world!");\n}',
+  language: 'javascript'
+});
