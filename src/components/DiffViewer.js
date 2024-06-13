@@ -1,18 +1,13 @@
+// DiffViewer.js
 import React from 'react';
-import { DiffViewer } from 'react-diff-viewer';
+import DiffViewerComponent from './DiffViewerComponent'; // パスが正しいか確認してください
 
-// DiffViewerComponentコンポーネントの定義
-const DiffViewerComponent = ({ studentText, correctText }) => {
-    return (
-        <DiffViewer
-            oldValue={correctText} // 正解のテキストを左側に表示
-            newValue={studentText} // 学生のテキストを右側に表示
-            splitView={true} // サイドバイサイドの表示
-            hideLineNumbers={true}
-            showDiffOnly={true}
-        />
-    );
+const DiffViewer = () => {
+  return (
+    <div>
+      <DiffViewerComponent />
+    </div>
+  );
 };
 
-// DiffViewerComponentをエクスポート
-export default DiffViewerComponent;
+export default DiffViewer;
