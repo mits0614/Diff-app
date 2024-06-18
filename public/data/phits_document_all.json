@@ -1,0 +1,400 @@
+{
+  "patterns": [
+    {
+      "pattern": "\\[title\\]",
+      "description": "計算のタイトルを定義します。"
+    },
+    {
+      "pattern": "\\[parameters\\]",
+      "description": "ヒストリー数など、計算の動作を決めるパラメータを定義します。"
+    },
+    {
+      "pattern": "\\[source\\]",
+      "description": "入力ソース粒子の情報を定義します。"
+    },
+    {
+      "pattern": "\\[material\\]",
+      "description": "体系を構成する物質を定義します。順序はMAT[物質番号]_元素_組成比_元素 組成比_... ..."
+    },
+    {
+      "pattern": "\\[surface\\]",
+      "description": "体系を構成する面を定義します。順序は、面番号_座標変換番号_面記号_面定義数値"
+    },
+    {
+      "pattern": "\\[cell\\]",
+      "description": "体系を構成するセルを定義します。順序は、セル番号_物質番号_物質密度_セル定義文_セルパラメータ"
+    },
+    {
+      "pattern": "\\[transform\\]",
+      "description": "体系を構成する面などの座標変換を定義します。"
+    },
+    {
+      "pattern": "\\[temperature\\]",
+      "description": "cell の温度を定義します。"
+    },
+    {
+      "pattern": "\\[mat time change\\]",
+      "description": "物質の時間変化を定義します。"
+    },
+    {
+      "pattern": "\\[magnetic field\\]",
+      "description": "体系を構成する領域の磁場を定義します。"
+    },
+    {
+      "pattern": "\\[electro magnetic field\\]",
+      "description": "体系を構成する領域の電磁混合場を定義します。"
+    },
+    {
+      "pattern": "\\[delta ray\\]",
+      "description": "δ 線を発生させます。"
+    },
+    {
+      "pattern": "\\[track structure\\]",
+      "description": "飛跡構造解析モードを使用するための設定を定義します。"
+    },
+    {
+      "pattern": "\\[super mirror\\]",
+      "description": "低エネルギー中性子のスーパーミラーを定義します。"
+    },
+    {
+      "pattern": "\\[elastic option\\]",
+      "description": "低エネルギー中性子の弾性衝突のオプションを定義します。"
+    },
+    {
+      "pattern": "\\[data max\\]",
+      "description": "核種毎に核データライブラリを利用する上限エネルギーを定義します。"
+    },
+    {
+      "pattern": "\\[frag data\\]",
+      "description": "ユーザー指定断面積読み込み機能について定義します。"
+    },
+    {
+      "pattern": "\\[importance\\]",
+      "description": "領域の importance を定義します。"
+    },
+    {
+      "pattern": "\\[weight window\\]",
+      "description": "領域の weight window を定義します。"
+    },
+    {
+      "pattern": "\\[ww bias\\]",
+      "description": "[weight window] のパラメータにかけるバイアスを定義します。"
+    },
+    {
+      "pattern": "\\[forced collisions\\]",
+      "description": "強制衝突の領域とファクターを定義します。"
+    },
+    {
+      "pattern": "\\[Repeated collisions\\]",
+      "description": "核反応の繰返し衝突の領域とファクターを定義します。"
+    },
+    {
+      "pattern": "\\[volume\\]",
+      "description": "体系を構成する領域の体積を定義します。"
+    },
+    {
+      "pattern": "\\[multiplier\\]",
+      "description": "multiplier を定義します。"
+    },
+    {
+      "pattern": "\\[mat name color\\]",
+      "description": "物質表示の名前、色、大きさを指定します。"
+    },
+    {
+      "pattern": "\\[reg name\\]",
+      "description": "領域表示の名前、大きさを指定します。"
+    },
+    {
+      "pattern": "\\[counter\\]",
+      "description": "counter を定義します。"
+    },
+    {
+      "pattern": "\\[timer\\]",
+      "description": "粒子の固有時間をリセット、ストップを定義します。"
+    },
+    {
+      "pattern": "\\[t-track\\]",
+      "description": "粒子の飛跡長 (track length) やフルエンスを導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-cross\\]",
+      "description": "粒子の面横断回数やフルエンスを導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-point\\]",
+      "description": "ある点や線上のフルエンスを導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-deposit\\]",
+      "description": "物質におけるエネルギー付与を導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-deposit2\\]",
+      "description": "2 つの領域でのエネルギー付与の相関を出力するタリー。"
+    },
+    {
+      "pattern": "\\[t-heat\\]",
+      "description": "物質におけるエネルギー付与を導出するタリー。(非推奨)"
+    },
+    {
+      "pattern": "\\[t-yield\\]",
+      "description": "残留核の生成量を導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-product\\]",
+      "description": "線源や核反応による生成粒子を導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-dpa\\]",
+      "description": "原子あたりのはじき出し数 (DPA) を導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-let\\]",
+      "description": "LET の関数として飛跡長や線量を導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-seed\\]",
+      "description": "微小領域におけるエネルギー付与分布を導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-time\\]",
+      "description": "Energy cut off と escape 粒子の個数を導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-interact\\]",
+      "description": "(従来の [t-star])反応数を導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-dchain\\]",
+      "description": "DCHAIN 用入力ファイルを作成するタリー。"
+    },
+    {
+      "pattern": "\\[t-wwg\\]",
+      "description": "[weight window] のパラメータを出力するタリー。"
+    },
+    {
+      "pattern": "\\[t-wwbg\\]",
+      "description": "[ww bias] のパラメータを出力するタリー。"
+    },
+    {
+      "pattern": "\\[t-volume\\]",
+      "description": "体積自動計算機能のためのタリー。"
+    },
+    {
+      "pattern": "\\[t-userdefined\\]",
+      "description": "ユーザー定義による任意の物理量を導出するタリー。"
+    },
+    {
+      "pattern": "\\[t-gshow\\]",
+      "description": "ジオメトリ(仮想空間)を 2 次元で表示するタリー。"
+    },
+    {
+      "pattern": "\\[t-rshow\\]",
+      "description": "ジオメトリを 2 次元で物理量による色分けをして表示するタリー。"
+    },
+    {
+      "pattern": "\\[t-3dshow\\]",
+      "description": "ジオメトリを 3 次元で表示するタリー。"
+    },
+    {
+      "pattern": "\\[end\\]",
+      "description": "入力ファイルの終了を示します。"
+    },
+    {
+      "pattern": "icntl=0",
+      "description": "通常の粒子輸送計算。"
+    },
+    {
+      "pattern": "icntl=1",
+      "description": "断面積・カーマファクター出力モード(/phits/sample/icntl1 参照)"
+    },
+    {
+      "pattern": "icntl=3",
+      "description": "inputechoの書き出し。メモリー空間、ライブラリー、ファイルのチェック用。"
+    },
+    {
+      "pattern": "icntl=5",
+      "description": "全てを真空 (void)領域とし、粒子の反応や散乱、電離等が起こらない輸送計算を実行する。geometry check や体積・面積計算の際に使用する。"
+    },
+    {
+      "pattern": "icntl=6",
+      "description": "ソースのチェック。[t-product] で線源粒子をタリーできる。"
+    },
+    {
+      "pattern": "icntl=7",
+      "description": "[t-gshow] タリーの実行。"
+    },
+    {
+      "pattern": "icntl=8",
+      "description": "xyz メッシュタリーの gshow オプションのあるものの幾何形状表示。"
+    },
+    {
+      "pattern": "icntl=9",
+      "description": "[t-rshow] タリーの実行。"
+    },
+    {
+      "pattern": "icntl=10",
+      "description": "reg メッシュタリーの rshow オプションのあるものの幾何形状表示。"
+    },
+    {
+      "pattern": "icntl=11",
+      "description": "[t-3dshow](3 次元幾何形状表示タリー)の実行。"
+    },
+    {
+      "pattern": "icntl=12",
+      "description": "dumpall ファイルから読み込んで再計算。file(15) で出力ファイルを指定。"
+    },
+    {
+      "pattern": "icntl=13",
+      "description": "タリー結果の統合機能(Sumtally 機能)の利用。"
+    },
+    {
+      "pattern": "icntl=14",
+      "description": "体積自動計算機能の利用。"
+    },
+    {
+      "pattern": "icntl=15",
+      "description": "[t-wwbg] タリーの実行。"
+    },
+    {
+      "pattern": "icntl=16",
+      "description": "分析機能スクリプトの利用。"
+    },
+    {
+      "pattern": "icntl=17",
+      "description": "[anatally] セクションの実行。"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "maxcas",
+      "description": "最大ヒストリー数"
+    },
+    {
+      "keyword": "maxbch",
+      "description": "最大バッチ数。バッチ分散の場合、maxbch を大きくした方が計算の信頼性が高くなります。ただし、計算時間が長くなる可能性があるため注意が必要です。ヒストリー分散モードでは標準誤差は全ヒストリー数のみに依存します。"
+    },
+    {
+      "keyword": "mesh",
+      "description": "形状メッシュ"
+    },
+    {
+      "keyword": "volumeDefinition",
+      "description": "volume 定義文。"
+    },
+    {
+      "keyword": "-type",
+      "description": "type1: 群数、分点をデータで与える。type2: 群数と最小値、最大値を与え、線形で等分点が与えられる。type3: 群数と最小値、最大値を与え、対数で等分点が与えられる。type4: メッシュ幅と最小値、最大値を与え、線形で等分点が与えられる。type5: 最小値、最大値、メッシュ幅の対数値を与え、対数で等分点が与えられる。"
+    },
+    {
+      "keyword": "axis",
+      "description": "出力するデータのx軸を決定する。xy,yz,xz,rz,t(時間軸)で2次元表示も可能。"
+    },
+    {
+      "keyword": "file",
+      "description": "出力するファイル名。"
+    },
+    {
+      "keyword": "title",
+      "description": "出力ファイルヘッダーのタイトル。"
+    },
+    {
+      "keyword": "gshow",
+      "description": "領域境界、物質番号、領域番号、LAT番号を表示。gshow=5 でピクセル形式で物質色を表示。"
+    },
+    {
+      "keyword": "epsout",
+      "description": "1でANGELで処理したepsファイルを作成。2で誤差棒を表示。"
+    },
+    {
+      "keyword": "unit=1",
+      "description": "[1/cm^2/source]"
+    },
+    {
+      "keyword": "unit=2",
+      "description": "[1/cm^2/MeV/source]"
+    },
+    {
+      "keyword": "unit=3",
+      "description": "[1/cm^2/Lethargy/source]"
+    },
+    {
+      "keyword": "unit=4",
+      "description": "[cm/source]"
+    },
+    {
+      "keyword": "unit=11",
+      "description": "[1/cm^2 /nsec/source]"
+    },
+    {
+      "keyword": "unit=12",
+      "description": "[1/cm^2 /nsec/MeV/source]"
+    },
+    {
+      "keyword": "unit=13",
+      "description": "[1/cm^2 /Lethargy/nsec/source]"
+    },
+    {
+      "keyword": "unit=14",
+      "description": "[cm/nsec/source]"
+    }
+  ],
+  "sourceTypes": [
+    {
+      "s-type": 1,
+      "description": "円柱(円面、ペンシルビーム)。",
+      "parameters": {
+        "x0": "(D=0.0) 円柱の中心の x 座標 [cm]。",
+        "y0": "(D=0.0) 円柱の中心の y 座標 [cm]。",
+        "z0": "(D=0.0) 円柱の z 軸方向の下限 [cm]。",
+        "z1": "(D=0.0) 円柱の z 軸方向の上限(円面の場合は下限と同じ)[cm]。",
+        "r0": "(D=0.0) 円柱の半径(r0=0.0 のときペンシルビーム)[cm]。",
+        "r1": "(D=0.0) 円柱の内半径 [cm]。中空部分を指定する。",
+        "dir": "(D=1.0) 入射粒子の z 軸方向からの方向余弦。all を指定した時は、等方分布。data を指定した時は、a-type サブセクションが必要。",
+        "phi": "(D=all) 入射粒子の方位角 [degree]。= all; 0 から 360 の範囲でランダムに決定。",
+        "dom": "(D=0.0) 入射粒子方向の立体角範囲 [degree]。= −1 ; cos^2 の bias がかかった分布。",
+        "e0": "(単色の場合)入射粒子のエネルギー [MeV/n]。",
+        "e-type": "(分布をもつ場合)入射粒子のエネルギー [MeV/n]。"
+      }
+    },
+    {
+      "s-type": 2,
+      "description": "角柱(長方形)。",
+      "parameters": {
+        "x0": "(D=0.0) 角柱の下限の x 座標 [cm]。",
+        "x1": "(D=0.0) 角柱の上限の x 座標 [cm]。",
+        "y0": "(D=0.0) 角柱の下限の y 座標 [cm]。",
+        "y1": "(D=0.0) 角柱の上限の y 座標 [cm]。",
+        "z0": "(D=0.0) 角柱の下限の z 座標 [cm]。",
+        "z1": "(D=0.0) 角柱の上限の z 座標(長方形の場合は下限と同じ)[cm]。",
+        "dir": "(D=1.0) 入射粒子の z 軸方向からの方向余弦。all を指定した時は、等方分布。data を指定した時は、a-type サブセクションが必要。",
+        "phi": "(D=all) 入射粒子の方位角 [degree]。= all; 0 から 360 の範囲でランダムに決定。",
+        "dom": "(D=0.0) 入射粒子方向の立体角範囲 [degree]。= −1 ; cos^2 の bias がかかった分布。",
+        "e0": "(単色の場合)入射粒子のエネルギー [MeV/n]。",
+        "e-type": "(分布をもつ場合)入射粒子のエネルギー [MeV/n]。"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "keyword": "dir",
+      "description": "入射粒子の z 軸方向からの方向余弦。all を指定した時は、等方分布。data を指定した時は、a-type サブセクションが必要。"
+    },
+    {
+      "keyword": "phi",
+      "description": "入射粒子の方位角 [degree]。= all; 0 から 360 の範囲でランダムに決定。"
+    },
+    {
+      "keyword": "dom",
+      "description": "入射粒子方向の立体角範囲 [degree]。= −1 ; cos^2 の bias がかかった分布。"
+    },
+    {
+      "keyword": "e0",
+      "description": "(単色の場合)入射粒子のエネルギー [MeV/n]。"
+    },
+    {
+      "keyword": "e-type",
+      "description": "(分布をもつ場合)入射粒子のエネルギー [MeV/n]。"
+    }
+  ]
+}

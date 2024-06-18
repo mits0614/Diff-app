@@ -1,85 +1,67 @@
 import React, { useState, useEffect } from 'react';
 
-// モーダルコンポーネントの作成
-const Modal = ({ isOpen, onClose, content }) => {
-  if (!isOpen) return null;
-  return (
-    <div className="modal">
-      <div className="modal-content">
-        <span className="close" onClick={onClose}>&times;</span>
-        <pre>{content}</pre>
-      </div>
-    </div>
-  );
-};
+const categories = [
+  { name: 'PHITS ドキュメント 1', file: 'phits_document.json', key: 'keywords' },
+  { name: 'PHITS ドキュメント 2', file: 'phits_document2.json', key: 'keywords' },
+  { name: 'ソースドキュメント', file: 'source_document.json', key: 'terms' },
+  { name: 'ソースタイプ', file: 'sourceTypes.json', key: 'types' }
+];
 
 const Glossary = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [results, setResults] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [modalContent, setModalContent] = useState('');
-  const [data, setData] = useState(null); // データ全体を保持するためのステート
+  const [glossaryData, setGlossaryData] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(categories[0].file);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/phits_document_all.json')
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error('Error loading glossary:', error));
-  }, []);
-
-  const handleSearch = () => {
-    if (!data) return;
-
-    const keywordResults = data.keywords.filter(item => 
-      item.keyword.includes(searchTerm)
-    ).slice(0, 3);
-    const sourceResults = data.sources.filter(item => 
-      item.source.includes(searchTerm)
-    ).slice(0, 3);
-    const sourceTypeResults = data.sourceTypes.filter(item => 
-      item['s-type'].toString().includes(searchTerm)
-    ).slice(0, 3);
-
-    const combinedResults = [
-      ...keywordResults.map(item => ({ title: item.keyword, description: item.description })),
-      ...sourceResults.map(item => ({ title: item.source, description: item.description })),
-      ...sourceTypeResults.map(item => ({
-        title: `s-type ${item['s-type']}`,
-        description: item.description,
-        parameters: item.parameters
-      }))
-    ];
-
-    setResults(combinedResults);
-  };
-
-  const handleItemClick = (description, parameters) => {
-    let content = description;
-    if (parameters) {
-      content += '\nParameters:\n' + JSON.stringify(parameters, null, 2);
-    }
-    setModalContent(content);
-    setIsOpen(true);
-  };
+    const loadGlossaryData = async () => {
+      try {
+        setLoading(true);
+        const category = categories.find(cat => cat.file === selectedCategory);
+        const response = await fetch(`/data/${category.file}`);
+        const data = await response.json();
+        const key = category.key;
+        
+        if (Array.isArray(data[key])) {
+          setGlossaryData(data[key]);
+        } else {
+          console.error('Invalid data format:', data);
+          setGlossaryData([]);
+        }
+        setLoading(false);
+      } catch (error) {
+        console.error('Error loading glossary data:', error);
+        setGlossaryData([]);
+        setLoading(false);
+      }
+    };
+    loadGlossaryData();
+  }, [selectedCategory]);
 
   return (
-    <div>
-      <h1>Glossary</h1>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search..."
-      />
-      <button onClick={handleSearch}>Search</button>
-      <ul>
-        {Array.isArray(results) && results.map((item, index) => (
-          <li key={index} onClick={() => handleItemClick(item.description, item.parameters)}>
-            {item.title}
-          </li>
+    <div className="glossary-container">
+      <h2>Glossary</h2>
+      <div className="category-selector">
+        {categories.map((category) => (
+          <button
+            key={category.file}
+            onClick={() => setSelectedCategory(category.file)}
+            className={selectedCategory === category.file ? 'active' : ''}
+          >
+            {category.name}
+          </button>
         ))}
-      </ul>
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} content={modalContent} />
+      </div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {glossaryData.map((entry, index) => (
+            <li key={index}>
+              <strong>{entry.keyword || entry.term || entry.type}</strong>: {entry.description || entry.definition}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

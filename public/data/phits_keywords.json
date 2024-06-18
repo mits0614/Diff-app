@@ -1,0 +1,268 @@
+{
+    "keywords": [
+        {
+            "keyword": "[title]",
+            "description": "Title of the input file."
+        },
+        {
+            "keyword": "[parameters]",
+            "description": "Parameters section of the input file."
+        },
+        {
+            "keyword": "[source]",
+            "description": "Source section of the input file."
+        },
+        {
+            "keyword": "[material]",
+            "description": "Material section of the input file."
+        },
+        {
+            "keyword": "[surface]",
+            "description": "Surface section of the input file."
+        },
+        {
+            "keyword": "[cell]",
+            "description": "Cell section of the input file."
+        },
+        {
+            "keyword": "[transform]",
+            "description": "Transform section of the input file."
+        },
+        {
+            "keyword": "[temperature]",
+            "description": "Temperature section of the input file."
+        },
+        {
+            "keyword": "[mat time change]",
+            "description": "Material time change section of the input file."
+        },
+        {
+            "keyword": "[magnetic field]",
+            "description": "Magnetic field section of the input file."
+        },
+        {
+            "keyword": "[electro magnetic field]",
+            "description": "Electro magnetic field section of the input file."
+        },
+        {
+            "keyword": "[delta ray]",
+            "description": "Delta ray section of the input file."
+        },
+        {
+            "keyword": "[track structure]",
+            "description": "Track structure section of the input file."
+        },
+        {
+            "keyword": "[super mirror]",
+            "description": "Super mirror section of the input file."
+        },
+        {
+            "keyword": "[elastic option]",
+            "description": "Elastic option section of the input file."
+        },
+        {
+            "keyword": "[data max]",
+            "description": "Data max section of the input file."
+        },
+        {
+            "keyword": "[frag data]",
+            "description": "Fragment data section of the input file."
+        },
+        {
+            "keyword": "[importance]",
+            "description": "Importance section of the input file."
+        },
+        {
+            "keyword": "[weight window]",
+            "description": "Weight window section of the input file."
+        },
+        {
+            "keyword": "[ww bias]",
+            "description": "Weight window bias section of the input file."
+        },
+        {
+            "keyword": "[forced collisions]",
+            "description": "Forced collisions section of the input file."
+        },
+        {
+            "keyword": "[repeated collisions]",
+            "description": "Repeated collisions section of the input file."
+        },
+        {
+            "keyword": "[volume]",
+            "description": "Volume section of the input file."
+        },
+        {
+            "keyword": "[multiplier]",
+            "description": "Multiplier section of the input file."
+        },
+        {
+            "keyword": "[mat name color]",
+            "description": "Material name color section of the input file."
+        },
+        {
+            "keyword": "[reg name]",
+            "description": "Region name section of the input file."
+        },
+        {
+            "keyword": "[counter]",
+            "description": "Counter section of the input file."
+        },
+        {
+            "keyword": "[timer]",
+            "description": "Timer section of the input file."
+        },
+        {
+            "keyword": "[t-track]",
+            "description": "T-track section of the input file."
+        },
+        {
+            "keyword": "[t-cross]",
+            "description": "T-cross section of the input file."
+        },
+        {
+            "keyword": "[t-point]",
+            "description": "T-point section of the input file."
+        },
+        {
+            "keyword": "[t-deposit]",
+            "description": "T-deposit section of the input file."
+        },
+        {
+            "keyword": "[t-deposit2]",
+            "description": "T-deposit2 section of the input file."
+        },
+        {
+            "keyword": "[t-heat]",
+            "description": "T-heat section of the input file."
+        },
+        {
+            "keyword": "[t-yield]",
+            "description": "T-yield section of the input file."
+        },
+        {
+            "keyword": "[t-product]",
+            "description": "T-product section of the input file."
+        },
+        {
+            "keyword": "[t-dpa]",
+            "description": "T-dpa section of the input file."
+        },
+        {
+            "keyword": "[t-let]",
+            "description": "T-let section of the input file."
+        },
+        {
+            "keyword": "[t-seed]",
+            "description": "T-seed section of the input file."
+        },
+        {
+            "keyword": "[t-time]",
+            "description": "T-time section of the input file."
+        },
+        {
+            "keyword": "[t-interact]",
+            "description": "T-interact section of the input file."
+        },
+        {
+            "keyword": "[t-dchain]",
+            "description": "T-dchain section of the input file."
+        },
+        {
+            "keyword": "[t-wwg]",
+            "description": "T-wwg section of the input file."
+        },
+        {
+            "keyword": "[t-wwbg]",
+            "description": "T-wwbg section of the input file."
+        },
+        {
+            "keyword": "[t-volume]",
+            "description": "T-volume section of the input file."
+        },
+        {
+            "keyword": "[t-userdefined]",
+            "description": "T-userdefined section of the input file."
+        },
+        {
+            "keyword": "[t-gshow]",
+            "description": "T-gshow section of the input file."
+        },
+        {
+            "keyword": "[t-rshow]",
+            "description": "T-rshow section of the input file."
+        },
+        {
+            "keyword": "[t-3dshow]",
+            "description": "T-3dshow section of the input file."
+        },
+        {
+            "keyword": "[end]",
+            "description": "End of the input file."
+        },
+        {
+            "keyword": "icntl=0",
+            "description": "Control parameter set to 0."
+        },
+        {
+            "keyword": "icntl=1",
+            "description": "Control parameter set to 1."
+        },
+        {
+            "keyword": "icntl=3",
+            "description": "Control parameter set to 3."
+        },
+        {
+            "keyword": "icntl=5",
+            "description": "Control parameter set to 5."
+        },
+        {
+            "keyword": "icntl=6",
+            "description": "Control parameter set to 6."
+        },
+        {
+            "keyword": "icntl=7",
+            "description": "Control parameter set to 7."
+        },
+        {
+            "keyword": "icntl=8",
+            "description": "Control parameter set to 8."
+        },
+        {
+            "keyword": "icntl=9",
+            "description": "Control parameter set to 9."
+        },
+        {
+            "keyword": "icntl=10",
+            "description": "Control parameter set to 10."
+        },
+        {
+            "keyword": "icntl=11",
+            "description": "Control parameter set to 11."
+        },
+        {
+            "keyword": "icntl=12",
+            "description": "Control parameter set to 12."
+        },
+        {
+            "keyword": "icntl=13",
+            "description": "Control parameter set to 13."
+        },
+        {
+            "keyword": "icntl=14",
+            "description": "Control parameter set to 14."
+        },
+        {
+            "keyword": "icntl=15",
+            "description": "Control parameter set to 15."
+        },
+        {
+            "keyword": "icntl=16",
+            "description": "Control parameter set to 16."
+        },
+        {
+            "keyword": "icntl=17",
+            "description": "Control parameter set to 17."
+        }
+    ]
+}

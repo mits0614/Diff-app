@@ -11,8 +11,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-  },alias: {
-    'monaco-editor': path.resolve(__dirname, 'node_modules/monaco-editor')
+    alias: {
+      'monaco-editor': path.resolve(__dirname, 'node_modules/monaco-editor')
+    }
   },
   module: {
     rules: [
@@ -42,11 +43,20 @@ module.exports = {
       template: './public/index.html',
     }),
     new MonacoWebpackPlugin({
-      languages: ['javascript', 'typescript']
+      languages: ['javascript', 'typescript', 'phits']  // PHITS言語を追加
     })
   ],
   devServer: {
     historyApiFallback: true,
-    contentBase: './dist',
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    compress: true,
+    port: 9000,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization'
+    }
   },
 };
